@@ -1,0 +1,38 @@
+.new-tweet{
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+.counter{
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+}
+
+button{
+  background-color: #4056A1;
+  border: none;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  height: 29px;
+  width: 95px;
+  font-size: 20px;
+  color: white;
+}
+
+.buttonNCount{
+  display: flex;
+justify-content: space-between;
+}
+
+hr.solidLine{
+  border-bottom: 3px solid #545149;
+}
+
+#tweet-text{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+

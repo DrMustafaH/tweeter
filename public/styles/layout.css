@@ -17,6 +17,7 @@ html {
    font-family: 'Bungee', sans-serif;
   }
 
+  
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -30,6 +31,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* control the width of the main and it's layout */
  .container{
    width: 90%;
    color: #545149;

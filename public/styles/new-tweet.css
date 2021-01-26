@@ -1,13 +1,16 @@
+/* tweet font */
 .new-tweet{
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
 
+/* counter number font */
 .counter{
   font-family: "Bungee", sans-serif;
   font-weight: 400;
 }
 
+/* tweet button layout */
 button{
   background-color: #4056A1;
   border: none;
@@ -19,15 +22,18 @@ button{
   color: white;
 }
 
+/* position the count and button */
 .buttonNCount{
   display: flex;
 justify-content: space-between;
 }
 
+/* draw a solid line below tweet input */
 hr.solidLine{
   border-bottom: 3px solid #545149;
 }
 
+/* tweet form layout */
 #tweet-text{
   background-color: transparent;
   border: none;
@@ -36,3 +42,7 @@ hr.solidLine{
   font-weight: bold;
 }
 
+/* red color for count when negative */
+.red{
+  color: red
+}

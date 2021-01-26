@@ -1,3 +1,4 @@
+/* Nav bar layout */
 nav{
   height: 120px;
   width: auto;
@@ -9,6 +10,7 @@ nav{
   justify-content: space-between;
 }
 
+/* Write a new tweet font */
 .newTweet{
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;

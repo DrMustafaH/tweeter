@@ -17,6 +17,7 @@
     "md5": "^2.1.0"
   },
   "devDependencies": {
+    "moment": "^2.29.1",
     "nodemon": "^1.9.2"
   }
 }

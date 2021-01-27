@@ -31,6 +31,7 @@ justify-content: space-between;
 /* draw a solid line below tweet input */
 hr.solidLine{
   border-bottom: 3px solid #545149;
+  margin-top: none;
 }
 
 /* tweet form layout */

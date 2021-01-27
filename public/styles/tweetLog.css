@@ -1,0 +1,82 @@
+/* layout of the article parent */
+article{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid #545149;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+/* create a box shadow on hover */
+article:hover{
+  box-shadow: 8px 8px #4057a14a;
+  opacity: 1;
+}
+
+/* name of user and @username layout */
+.name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 40px 20px;
+}
+
+/* tweet layout */
+.postedTweet{
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* make a solid  */
+hr.solidLine{
+  border-bottom: 3px solid #545149;
+  margin-top: 30px;
+  margin-bottom: none;
+}
+
+/* make the @username invisible */
+#username{
+  opacity: 0;
+}
+
+/* show @username appear on hover */
+article:hover #username{
+  color:#4057a14a;
+}
+
+/* footer info layout */
+.footerInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: small;
+  font-weight: 600;
+  padding: 0px 30px 10px 30px;
+}
+
+/* coloring the interation icons */
+#interaction{
+  color:#4056a1;
+}
+
+/* align avatr,name and username */
+.nameNImg{
+  display:flex;
+  align-items: center;
+}
+
+/* create space b/w avatar and name */
+.nameNImg img{
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}

@@ -1,4 +1,4 @@
-/* header section (avatar and name) layout */
+/* header section (profilePic and name) layout */
 .avatarInfo {
   height: 400px;
   width: 100%;
@@ -9,4 +9,5 @@
   align-items: center;
   background-color: #802623;
 background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+margin-top: 100px;
 }

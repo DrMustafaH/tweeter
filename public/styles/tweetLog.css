@@ -1,5 +1,5 @@
 /* layout of the article parent */
-#tweets-container{
+#tweet-container{
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -13,7 +13,7 @@
 }
 
 /* create a box shadow on hover */
-#tweets-container:hover{
+#tweet-container:hover{
   box-shadow: 8px 8px #4057a14a;
   opacity: 1;
 }
@@ -36,7 +36,7 @@
 }
 
 /* make a solid  */
-hr.solidLine{
+.solidLine{
   border-bottom: 3px solid #545149;
   margin-top: 30px;
   margin-bottom: none;
@@ -48,7 +48,7 @@ hr.solidLine{
 }
 
 /* show @username appear on hover */
-#tweets-container:hover #username{
+#tweet-container:hover #username{
   color:#4057a14a;
 }
 

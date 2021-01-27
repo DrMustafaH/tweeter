@@ -42,6 +42,7 @@ $(document).ready(function () {
     const markup =
       `
       <article id="tweets-container">
+      <article id="tweet-container">
     <div class="name">
       <span class="nameNImg"><img src=${tweetObj.user.avatars}>${tweetObj.user.name}</span>
       <span id="username">${tweetObj.user.handle}</span>
@@ -58,6 +59,7 @@ $(document).ready(function () {
         <i class="fas fa-heart"></i>
       </footer>
     </div>
+    </article>
     </article>
   `;
     return markup;

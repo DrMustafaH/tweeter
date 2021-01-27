@@ -44,7 +44,7 @@ hr.solidLine{
 
 /* make the @username invisible */
 #username{
-  opacity: 0;
+  color: transparent;
 }
 
 /* show @username appear on hover */

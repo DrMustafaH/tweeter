@@ -56,11 +56,11 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
+      <form action="/tweets/" method="POST" id="tweet-form">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <hr class=" solidLine">
+        <hr class=" solidLineNew">
         <div class="buttonNCount">
-          <button type="submit" action="../server/routes/tweets.js">Tweet</button>
+          <button type="submit" id="tweet-button" action="../server/routes/tweets.js">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>

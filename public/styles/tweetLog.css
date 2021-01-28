@@ -35,7 +35,14 @@
   padding-right: 20px;
 }
 
-/* make a solid  */
+/* make a solidline below tweet of tweetLog  */
+.solidLineNew{
+  border-bottom: 3px solid #545149;
+  margin-top: none;
+  margin-bottom: none;
+}
+
+/* make a solidline below new tweet form  */
 .solidLine{
   border-bottom: 3px solid #545149;
   margin-top: 30px;

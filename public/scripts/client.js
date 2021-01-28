@@ -5,6 +5,14 @@
  */
 $(document).ready(function () {
 
+  // logic to control the tweet button and make it form a tweet (in the server) without getting sent to the /tweets page
+  const $form = $('#tweet-form')
+  $form.submit(function (event) {
+    event.preventDefault();
+    $.ajax({ method: 'POST', url: "/tweets", data: $form.serialize() })
+  });
+
+  // temperory data to test the functions
   const data = [
     {
       "user": {
@@ -31,6 +39,7 @@ $(document).ready(function () {
     }
   ]
 
+  // function that takes an array of tweet object and render each tweet by using prepend jquery
   const renderTweets = function (tweets) {
     tweets.forEach(tweet => {
       const result = createTweetElement(tweet);
@@ -38,6 +47,7 @@ $(document).ready(function () {
     });
   }
 
+  // function that take a tweetObj and implement it on an HTML markup
   function createTweetElement(tweetObj) {
     const markup =
       `

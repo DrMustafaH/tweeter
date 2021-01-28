@@ -1,16 +1,23 @@
 $(document).ready(function () {
 
-  // logic to control the tweet button and make it form a tweet (in the server) without getting sent to the /tweets page with error handling
+  // logic to control the tweet button and make it form a tweet (in the server) without getting sent to the /tweets page
   const $form = $('#tweet-form')
   $form.submit(function (event) {
     event.preventDefault();
+    // error handling
     const textLength = $('#tweet-text').val().length;
     if (textLength === 0) {
       alert("Please type in a tweet");
     } else if (textLength > 140) {
       alert("You exceeded character limit in your tweet");
     } else {
-      $.post("/tweets/", $form.serialize());
+      // logic to post tweet
+      $.post("/tweets/", $form.serialize())
+        // when response comes refresh page and clear form
+        .then((response) => {
+          loadTweets();
+          $("#tweet-text").val("");
+        })
     }
   });
 

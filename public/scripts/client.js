@@ -1,54 +1,31 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 $(document).ready(function () {
 
   // logic to control the tweet button and make it form a tweet (in the server) without getting sent to the /tweets page
   const $form = $('#tweet-form')
   $form.submit(function (event) {
     event.preventDefault();
-    $.ajax({ method: 'POST', url: "/tweets", data: $form.serialize() })
+    $.ajax({
+      method: 'POST',
+      url: "/tweets",
+      data: $form.serialize(),
+    })
   });
 
-  // temperory data to test the functions
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-  // function that takes an array of tweet object and render each tweet by using prepend jquery
-  const renderTweets = function (tweets) {
-    tweets.forEach(tweet => {
-      const result = createTweetElement(tweet);
-      $('#tweets-container').prepend(result);
-    });
+  // logic to render tweets submitted to and saved in the server
+  const loadTweets = function () {
+    $.ajax({
+      method: 'GET',
+      url: "/tweets",
+      data: 'json',
+      success: (response) => {
+        renderTweets(response);
+      }
+    })
   }
+  loadTweets()
 
   // function that take a tweetObj and implement it on an HTML markup
-  function createTweetElement(tweetObj) {
+  const createTweetElement = function (tweetObj) {
     const markup =
       `
       <article id="tweet-container">
@@ -73,5 +50,12 @@ $(document).ready(function () {
     return markup;
   }
 
-  renderTweets(data);
+  // function that takes an array of tweet object and render each tweet by using prepend jquery
+  const renderTweets = function (tweets) {
+    tweets.forEach(tweet => {
+      const result = createTweetElement(tweet);
+      $('#tweets-container').prepend(result);
+    });
+  }
+
 })

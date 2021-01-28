@@ -38,3 +38,29 @@ body {
    background-color: #f4f1ec;
    align-self: center;
  }
+
+ /* Responsive design for desktops of size more than 1024px */
+ @media only screen and (min-width: 1024px) {
+  body .container {
+    width: 50%;
+    height: auto;
+    float: right;
+    margin-top: 300px;
+  }
+    body .avatarInfo {
+      width: 500px;
+      height: 400px;
+      float: center;
+      margin-top: 300px;
+    }
+
+    body{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    body nav{
+      background-color: #4056A1;
+      background-image: none;
+      }
+}

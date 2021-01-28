@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweetLog.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/errorMsg.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -54,9 +55,11 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <div id="errorhandle"></div>
     <section class="new-tweet">
       <h3>Compose Tweet</h3>
       <form action="/tweets/" method="POST" id="tweet-form">
+        <!-- <label for="tweet-text" class="humming">What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <hr class=" solidLineNew">
         <div class="buttonNCount">

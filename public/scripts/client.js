@@ -4,20 +4,24 @@ $(document).ready(function () {
   const $form = $('#tweet-form')
   $form.submit(function (event) {
     event.preventDefault();
-    // logic to handle XSS
+    // Variables to handle XSS and errors
     const userText = $('#tweet-text').val();
-    const userTextXSS = $('#tweet-text').text(userText)
+    const userTextXSS = $('#tweet-text').text(userText);
     const textLength = $('#tweet-text').val().length;
+    const error = $('#errorhandle').slideDown();
+    // logic to hide error on everytime tweet button clicked
+    error.css("display", 'none');
     // error handling conditions
     if (textLength === 0) {
-      alert("Please type in a tweet");
+      error.text('⚠ You aren\'t humming ⚠ Please do , and remember to keep it below 140 ⚠');
+      error.css("display", 'block');
     } else if (textLength > 140) {
-      alert("You exceeded character limit in your tweet");
-    } else if (typeof userTextXSS === "object") {
-      alert("Are you trying to hack us? haha try again!")
-    } else {
-      // logic to post tweet
-      $.post("/tweets/", `text=${userTextXSS}`)
+      error.text('⚠ You exceeded the character limit ⚠ Please keep it to 140⚠');
+      error.css("display", 'block');
+    }
+    // logic to post tweet
+    else {
+      $.post("/tweets/", $form.serialize())
         // when response comes refresh page and clear form
         .then((response) => {
           loadTweets();

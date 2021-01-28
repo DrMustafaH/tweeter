@@ -1,12 +1,17 @@
 $(document).ready(function () {
 
+  const escape = function (str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
   // logic to control the tweet button and make it form a tweet (in the server) without getting sent to the /tweets page
   const $form = $('#tweet-form')
   $form.submit(function (event) {
     event.preventDefault();
     // Variables to handle XSS and errors
     const userText = $('#tweet-text').val();
-    const userTextXSS = $('#tweet-text').text(userText);
+    const escapedText = (escape(userText))
     const textLength = $('#tweet-text').val().length;
     const error = $('#errorhandle').slideDown();
     // logic to hide error on everytime tweet button clicked
@@ -21,11 +26,15 @@ $(document).ready(function () {
     }
     // logic to post tweet
     else {
-      $.post("/tweets/", $form.serialize())
+      $.post("/tweets/", `text=${escapedText}`)
         // when response comes refresh page and clear form
         .then((response) => {
           loadTweets();
           $("#tweet-text").val("");
+        })
+        .catch((err) => {
+          error.text('⚠ Are you trying to hack me? ⚠ HAHA, try again!⚠');
+          error.css("display", 'block');
         })
     }
   });
@@ -40,6 +49,7 @@ $(document).ready(function () {
 
   // function that take a tweetObj and implement it on an HTML markup
   const createTweetElement = function (tweetObj) {
+
     const markup =
       `
       <article id="tweet-container">

@@ -22,7 +22,7 @@ const createTweetElement = function (tweetObj) {
   </article>
 `;
   return markup;
-}
+};
 
 // function that takes an array of tweet object and render each tweet by using prepend jquery
 const renderTweets = function (tweets) {
@@ -30,18 +30,18 @@ const renderTweets = function (tweets) {
     const result = createTweetElement(tweet);
     $('#tweets-container').prepend(result);
   });
-}
+};
 
 // function to render tweets submitted to and saved in the server
 const loadTweets = function () {
   $.get("/tweets", (response) => {
     renderTweets(response);
-  })
-}
+  });
+};
 
 // function to protect webpage from XSS
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};

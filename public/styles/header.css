@@ -11,3 +11,7 @@
 background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
 margin-top: 100px;
 }
+
+.photoNname{
+  z-index: 2;
+}

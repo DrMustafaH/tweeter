@@ -47,6 +47,7 @@ body {
     float: right;
     margin-top: 300px;
   }
+
     body .avatarInfo {
       width: 500px;
       height: 400px;
@@ -62,7 +63,12 @@ body {
     body nav{
       background-color: #4056A1;
       background-image: none;
+      z-index: 1;
       }
 
+      body .photoNname{
+        z-index: 0;
+      }
+      
 }
 

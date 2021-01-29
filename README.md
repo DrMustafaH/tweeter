@@ -2,7 +2,20 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+A very user-freiendly webpage that lets the user to tweet tweets with a limit of 140 characters. Tweeter project is designed to work on desktops and on smaller devices (mobile or tablet).
+
+
+## Final Product Screenshots
+
+This screenshot shows the 
+ [screenshot here]
+This screenshot shows the 
+ [screenshot here]
+This screenshot shows the 
+ [screenshot here]
+This screenshot shows the 
+ [screenshot here]
+
 
 ## Getting Started
 
@@ -15,3 +28,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance

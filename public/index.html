@@ -29,7 +29,10 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/helpers.js"></script>
   <script src="/scripts/composer-char-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
 </head>
 
 <body>
@@ -38,6 +41,7 @@
     <span>tweeter</span>
     <span class="newTweet">
       <strong>Write</strong> a new tweet
+
     </span>
   </nav>
 
@@ -57,7 +61,7 @@
   <main class="container">
     <div id="errorhandle"></div>
     <section class="new-tweet">
-      <h3>Compose Tweet</h3>
+      <!-- <h3>Compose Tweet</h3> -->
       <form action="/tweets/" method="POST" id="tweet-form">
         <!-- <label for="tweet-text" class="humming">What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>

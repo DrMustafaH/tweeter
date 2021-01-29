@@ -63,4 +63,8 @@ body {
       background-color: #4056A1;
       background-image: none;
       }
+
+    body #tweet-text{
+      margin-top: 0px;
+    }
 }

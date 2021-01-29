@@ -11,7 +11,7 @@
 }
 
 /* tweet button layout */
-button{
+#tweet-button{
   background-color: #4056A1;
   border: none;
   font-family: "Bungee", sans-serif;

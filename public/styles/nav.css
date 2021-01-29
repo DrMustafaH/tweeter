@@ -18,9 +18,41 @@ nav{
   z-index: 1;
 }
 
-/* Write a new tweet font */
+/* Write a new tweet font and button layout*/
 .newTweet{
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  -webkit-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+  0% { 
+      opacity: 0.5;
+  }
+  50% { 
+      opacity: 1.0;
+  }
+  100% { 
+      opacity: 0.5;
+  }
+}
+
+/* write a tweet stop pulsating when hover on it */
+.newTweet:hover{
+  font-weight: bold;
+  font-style: italic;
+  -webkit-animation: none;
+  cursor: pointer;
+  /* -webkit-animation-iteration-count: none; */
+  opacity: 1;
+}
+/* arrow down color */
+.fa.fa-arrow-circle-o-down{
+  color: red;
 }

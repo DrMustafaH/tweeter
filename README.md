@@ -7,7 +7,7 @@ A very user-freiendly webpage that lets the user to tweet tweets with a limit of
 
 ## Final Product Screenshots
 
-!["Screenshot of small screen landing page"] (https://github.com/DrMustafaH/tweeter/blob/master/docs/small-screen-landong-page.png?raw=true)
+!["Screenshot of small screen landing page"] (https://github.com/DrMustafaH/tweeter/blob/master/docs/small-screen-landong-page.png?raw=true)(./docs/small-screen-landong-page.png)
 
 !["Screenshot of large screen landing page"] (https://github.com/DrMustafaH/tweeter/blob/master/docs/large-screen-landing-page.png?raw=true)
 

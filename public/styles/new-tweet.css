@@ -2,6 +2,7 @@
 .new-tweet{
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
+  display: none;
 }
 
 /* counter number font */

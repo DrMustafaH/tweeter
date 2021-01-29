@@ -37,4 +37,11 @@ $(document).ready(function () {
   // load tweets when page is first opened
   loadTweets()
 
+  // logic to make the tweet form appear on clicking navbar and toggle typing automatically
+  $(".newTweet").click(() => {
+    $(".new-tweet").slideDown(1000);
+    setTimeout(() => {
+      $("#tweet-text").focus();
+    }, 1000);;
+  })
 })

@@ -44,4 +44,23 @@ $(document).ready(function () {
       $("#tweet-text").focus();
     }, 1000);;
   })
+
+  // logic to scroll up on clicking scrollUp button
+  $("#scrollTop").click(() => {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 500);
+  })
+
+  // logic to control when to show scroll button and when to hide
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 40) {
+      $('.newTweet').css("display", "none");
+      $('#scrollTop').fadeIn();
+    } else {
+      $('.newTweet').fadeIn();
+      $('#scrollTop').fadeOut(100);
+    }
+  });
+
 })

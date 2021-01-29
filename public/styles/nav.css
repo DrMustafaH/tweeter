@@ -2,7 +2,6 @@
 nav{
   height: 100px;
   width: auto;
-  /* background-color: #4056A1; */
   background-color: #802623;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   color: #ffffff;
@@ -20,6 +19,7 @@ nav{
 
 /* Write a new tweet font and button layout*/
 .newTweet{
+  display: block;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -49,9 +49,9 @@ nav{
   font-style: italic;
   -webkit-animation: none;
   cursor: pointer;
-  /* -webkit-animation-iteration-count: none; */
   opacity: 1;
 }
+
 /* arrow down color */
 .fa.fa-arrow-circle-o-down{
   color: red;

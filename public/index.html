@@ -60,13 +60,11 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <!-- <div id="newTweetContainer"> -->
     <div id="errorhandle"></div>
     <section class="new-tweet">
-      <!-- <h3>Compose Tweet</h3> -->
       <form action="/tweets/" method="POST" id="tweet-form">
-        <!-- <label for="tweet-text" class="humming">What are you humming about?</label> -->
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <label for="tweet-text" class="humming">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
         <hr class=" solidLineNew">
         <div class="buttonNCount">
           <button type="submit" id="tweet-button" action="../server/routes/tweets.js">Tweet</button>
@@ -74,6 +72,7 @@
         </div>
       </form>
     </section>
+    <button id="scrollTop"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></button>
     <article id="tweets-container"></article>
   </main>
 

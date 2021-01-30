@@ -46,10 +46,9 @@ $(document).ready(function () {
     $("#tweet-text").val("");// logic to handle text form in case of XSS error
     $(".counter").val("140");
     $('#errorhandle').css("display", "none");// logic to handle error message in case of XSS error
-    $(".new-tweet").slideDown(1000);
-    setTimeout(() => {
+    $(".new-tweet").slideDown(500, "linear", () => {
       $("#tweet-text").focus();
-    }, 1000);
+    });
     $('.newTweet').css("display", "none");
   });
 

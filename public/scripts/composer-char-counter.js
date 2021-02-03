@@ -11,9 +11,4 @@ $(document).ready(function () {
       counter.removeClass("red");
     }
   })
-
-
-
-
-
 });

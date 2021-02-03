@@ -26,6 +26,7 @@ const createTweetElement = function (tweetObj) {
 
 // function that takes an array of tweet object and render each tweet by using prepend jquery
 const renderTweets = function (tweets) {
+  $("#tweets-container").empty();
   tweets.forEach(tweet => {
     const result = createTweetElement(tweet);
     $('#tweets-container').prepend(result);
